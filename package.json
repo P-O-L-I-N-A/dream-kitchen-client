@@ -1,6 +1,6 @@
 {
   "name": "react-auth-template",
-  "homepage": "https://github.com/P-O-L-I-N-A/dream-kitchen-api.git/",
+  "homepage": "https://github.com/P-O-L-I-N-A/dream-kitchen-client.git",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
