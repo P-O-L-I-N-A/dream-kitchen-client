@@ -1,0 +1,31 @@
+#board {
+  display: block;
+}
+
+#board_target_container {
+  display: block;
+  width: 800px;
+  height: 400px;
+  margin: 20 auto;
+}
+
+.board_target {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+}
+
+#board_source_container {
+  display: block;
+  width: 800px;
+  height: 200px;
+  margin: 20 auto;
+}
+
+.board_source {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 20 auto;
+}
