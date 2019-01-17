@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
-  production: '<replace-with-heroku-url>',
-  development: 'http://localhost:4741'
+  production: '<https://git.heroku.com/mighty-coast-86932.git>',
+  development: 'http://localhost:7165/'
 }
 
 if (window.location.hostname === 'localhost') {
