@@ -1,6 +1,6 @@
 /* global ReactDnD, PropTypes */
 import React from 'react'
-import { ITEM } from 'items'
+import { ITEM } from './items'
 
 const Target = ({ connectDropTarget, highlighted, id, opacity }) => (
   connectDropTarget(

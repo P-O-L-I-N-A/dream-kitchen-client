@@ -1,7 +1,8 @@
 /* global React, ReactDnD, ReactDnDHTML5Backend, makeRandom */
-
-import Source from './source'
-import Target from './target'
+import React from 'react'
+import HTML5Backend from 'react-dnd-html5-backend'
+import {DragDropContext} from 'react-dnd'
+import './board.css'
 
 class Board extends React.Component {
 
@@ -9,12 +10,11 @@ class Board extends React.Component {
     super(props)
     this.image = 'https://cdn.pbrd.co/images/HWu1T1v.jpg'
     this.doDrop = (o) => this.handleDrop(o)
-    this.random = makeRandom(8)
+    //this.random = makeRandom(8)
     this.state = {
       image: this.image,
-      targets: Array(8).fill(1),
-      tile: this.random.next().value,
-      done: false
+      //  tile: this.random.next().value,
+      done: true
     }
   }
 
@@ -33,7 +33,6 @@ class Board extends React.Component {
 
   createContent({targets, done}) {
     if (done) return (<div id='board_congrats'>Congratulations!</div>)
-    else return (targets.map((e,i) => <Target key={i} id={i} opacity={e} />))
   }
 
   render() {
@@ -47,11 +46,10 @@ class Board extends React.Component {
           {this.createContent(this.state)}
         </div>
         <div id="board_source_container">
-          <Source image={image} id={tile} done={done} onDrop={this.doDrop} />
         </div>
       </div>
     )
   }
 }
 
-export default ReactDnD.DragDropContext(ReactDnDHTML5Backend.default)(Board)
+export default DragDropContext(HTML5Backend)(Board)
