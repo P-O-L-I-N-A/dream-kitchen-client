@@ -1,17 +1,17 @@
 /* global ReactDnD, PropTypes */
-
+import React from 'react'
 import { ITEM } from 'items'
 
 const Source = ({ connectDragSource, image, id, done, isDragging }) => {
   return connectDragSource(
-    <div>
-     className='board_source'
-     style={makeStyle(image, id, done, isDragging)}
-    <div/>
+    <div
+      className='board_source'
+      style={makeStyle(image, id, done, isDragging)}
+    />
   )
 }
 
-const makeStyle = ( image, id, done, isDragging ) => {
+const makeStyle = (image, id, done, isDragging) => {
   if (!done) {
     const x = (id % 4) * -200
     const y = Math.trunc(id / 4) * -200
